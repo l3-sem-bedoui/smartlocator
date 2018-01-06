@@ -1,0 +1,35 @@
+package com.example.angel.myapplication;
+
+        import android.support.v7.app.AppCompatActivity;
+        import android.os.Bundle;
+        import android.view.View;
+        import android.widget.Button;
+        import android.widget.EditText;
+        import android.widget.Toast;
+
+
+public class MainActivity extends AppCompatActivity{
+
+    private EditText nb1;
+    private EditText nb2;
+    private Button buttinres;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        nb1=(EditText)findViewById(R.id.editTextLogin);
+        nb2=(EditText)findViewById(R.id.editTextPassword);
+        buttinres=(Button)findViewById(R.id.editTextPasword);
+        buttinres.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View args) {
+                if ((nb1.getText().toString().equals("seif"))&&(nb2.getText().toString().equals("dhahri")))
+                    Toast.makeText(getApplicationContext(),"bien couple,login,mot de passe",Toast.LENGTH_SHORT).show();
+                else
+                    Toast.makeText(getApplicationContext(),"mauvais couple,login,mot de passe",Toast.LENGTH_SHORT).show();
+            }
+        });
+    }
+}

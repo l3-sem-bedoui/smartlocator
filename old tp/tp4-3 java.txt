@@ -1,0 +1,21 @@
+package com.example.angel.contact;
+
+import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.widget.TextView;
+
+/**
+ * Created by Angel on 29/05/2017.
+ */
+
+public class Main2activity extends AppCompatActivity {
+    TextView tv1;
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main2);
+        tv1 = (TextView) findViewById(R.id.tv1);
+        Bundle extras = getIntent().getExtras();
+        String parametres = extras.getString("KEYPARAMETRE");
+        tv1.setText("le parametre pass est :"+parametres);
+    }
+}

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.angel.conversion.MainActivity">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="conversion de monnaie"
+        android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+        android:layout_alignParentTop="true"
+        android:id="@+id/txtconversion"
+        android:fontFamily="sans-serif"
+        />
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:layout_marginTop="11dp"
+        android:id="@+id/edtxtMonnaie"
+        android:layout_below="@+id/txtconversion"
+
+
+
+        />
+    <RadioGroup
+        android:id="@+id/grouprdBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edtxtMonnaie"
+
+
+        >
+
+
+
+    <RadioButton
+        android:text="Dinar tunisien->Euro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/rdBtnDinaEuro"
+        android:layout_weight="1"
+        android:checked="true"
+        />
+     <RadioButton
+         android:text="Euro->Dinar Tunisien"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:id="@+id/rdBtnEuroDinar"
+         android:layout_weight="1"
+
+         />
+    </RadioGroup>
+    <TextView
+        android:text="resultat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textResult"
+        android:layout_centerVertical="true"
+
+        />
+    <Button
+        android:text="convertir"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnConvert"
+        android:layout_marginTop="18dp"
+        android:layout_below="@+id/grouprdBtn"
+
+        />
+
+
+</RelativeLayout>
